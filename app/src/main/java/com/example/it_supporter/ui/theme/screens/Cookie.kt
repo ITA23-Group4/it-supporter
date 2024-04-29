@@ -2,8 +2,14 @@ package com.example.it_supporter.ui.theme.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
@@ -15,6 +21,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.CustomColorScheme
@@ -30,20 +39,21 @@ fun CookieScreen(
     var isChecked by remember { mutableStateOf(false) }
 
     CustomColumn (
-        backgroundColor = CustomColorScheme.butterflyBushColor
+        backgroundColor = CustomColorScheme.OffWhite
     ){
+
+        Text(text = "Have you tried giving your device a cookie?"
+            , style = TextStyle(color = CustomColorScheme.mexicanRedColor), fontSize = 30.sp)
+
         CustomProgressBar(progress = customProgressBarProgress, height = 40)
 
-        Text(text = "Have you tried giving your device a cookie")
-
+        Spacer(modifier = Modifier.size(90.dp))
 
         Row (modifier = Modifier
             .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ){
-            Text(text = "Turn on cookies to continue")
-
             Switch(
                 checked = isChecked,
                 onCheckedChange = { isChecked = it },
@@ -54,15 +64,24 @@ fun CookieScreen(
                     checkedThumbColor = Color.LightGray
                 )
             )
+            Text(text = "Turn on cookies to continue")
         }
 
-        Button(
+        Spacer(modifier = Modifier.size(20.dp))
+
+        FilledTonalButton(
             onClick = {
                 navController.navigate("loading")
                 everythingViewModel.allowCookies = true
-            }) {
-            Text(text = "Apply")
+            },
+            modifier = Modifier
+                .padding(8.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = CustomColorScheme.duneColor),
+            shape = RoundedCornerShape(0.dp)
+        ){
+            Text(text = "Apply changes", style = TextStyle(color = CustomColorScheme.goldColor), fontSize = 45.sp)
         }
+
     }
 
 }

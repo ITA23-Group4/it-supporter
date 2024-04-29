@@ -37,7 +37,7 @@ fun Device(
         backgroundColor = CustomColorScheme.mantisColor
     ) {
         Spacer(modifier = Modifier.size(20.dp))
-        CustomProgressBar(progress = customProgressBarProgress, height = 12)
+        CustomProgressBar(progress = customProgressBarProgress, height = 18)
 
         Spacer(modifier = Modifier.size(200.dp))
 

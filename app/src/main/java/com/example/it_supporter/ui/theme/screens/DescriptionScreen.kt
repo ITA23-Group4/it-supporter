@@ -41,7 +41,7 @@ fun DescriptionScreen(
     ){
         Spacer(modifier = Modifier.size(50.dp))
 
-        CustomProgressBar(progress = customProgressBarProgress, height = 8)
+        CustomProgressBar(progress = customProgressBarProgress, height = 70)
 
         Spacer(modifier = Modifier.size(100.dp))
 
