@@ -23,9 +23,9 @@ import androidx.compose.ui.unit.dp
 fun TimeScreen(
     navController: NavController,
     everythingViewModel: EverythingViewModel,
-    customProgressBar: Unit
+    customProgressBarProgress: Float
 ) {
-    customProgressBar
+
 
     val timeScale = remember {
         listOf(
@@ -56,16 +56,20 @@ fun TimeScreen(
 
         Slider(
             value = sliderPosition,
-            onValueChange = { sliderPosition = it },
+            onValueChange = {
+                sliderPosition = it
+            },
             valueRange = 0f..1f,
             steps = 100,
-        )
+
+            )
 
         Button(
             onClick = {
                 navController.navigate("description")
+                everythingViewModel.time = timeScale[(sliderPosition * (timeScale.size - 1)).toInt()]
             }) {
-            Text(text = "Continue to")
+            Text(text = "Continue forth")
         }
     }
 }
