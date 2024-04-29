@@ -6,9 +6,11 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.it_supporter.ui.theme.screens.BabyScreen
 import com.example.it_supporter.ui.theme.screens.TimeScreen
 import com.example.it_supporter.ui.theme.screens.DescriptionScreen
 import com.example.it_supporter.ui.theme.screens.Device
+import com.example.it_supporter.ui.theme.screens.SpecificScreen
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
 
 @Composable
@@ -16,7 +18,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "welcome"){
+    NavHost(navController = navController, startDestination = "baby"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -41,10 +43,14 @@ fun Navigation() {
 
         }
         composable("baby"){
-
+            BabyScreen(
+                navController = navController
+            )
         }
         composable("specific"){
-
+            SpecificScreen(
+                navController = navController
+            )
         }
         composable("cookie"){
 
