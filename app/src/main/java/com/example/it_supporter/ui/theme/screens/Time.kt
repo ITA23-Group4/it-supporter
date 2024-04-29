@@ -56,15 +56,18 @@ fun TimeScreen(
 
         Slider(
             value = sliderPosition,
-            onValueChange = { sliderPosition = it },
+            onValueChange = {
+                sliderPosition = it
+            },
             valueRange = 0f..1f,
             steps = 100,
-        )
+
+            )
 
         Button(
             onClick = {
                 navController.navigate("description")
-                // TODO
+                everythingViewModel.time = timeScale[(sliderPosition * (timeScale.size - 1)).toInt()]
             }) {
             Text(text = "Continue to")
         }
