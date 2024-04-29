@@ -5,7 +5,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.it_supporter.ui.theme.screens.DescriptionScreen
+import com.example.it_supporter.ui.theme.screens.Device
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
 
 @Composable
@@ -18,7 +18,10 @@ fun Navigation() {
             WelcomeScreen()
         }
         composable("device"){
-            // everythingViewModel
+            Device(
+                navController = navController,
+                everythingViewModel = everythingViewModel
+            )
         }
         composable("time"){
 
