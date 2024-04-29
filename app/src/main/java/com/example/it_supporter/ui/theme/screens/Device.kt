@@ -13,7 +13,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.CustomColorScheme
@@ -41,7 +43,9 @@ fun Device(
 
         Spacer(modifier = Modifier.size(200.dp))
 
-        Text(text = "Please select the device you are using.")
+        Text(text = "Please select the device YOU are using.", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp, color = CustomColorScheme.duneColor)
+        )
+        Spacer(modifier = Modifier.size(20.dp))
         Text(text = "If you are using a device that is not listed, please select the closest match.")
 
         Spacer(modifier = Modifier.size(20.dp))

@@ -75,7 +75,7 @@ fun DescriptionScreen(
             Text(text = "YES", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp, color = CustomColorScheme.mantisColor))
         }
 
-        Spacer(modifier = androidx.compose.ui.Modifier.size(400.dp))
+        Spacer(modifier = androidx.compose.ui.Modifier.size(260.dp))
 
         Row (
             modifier = Modifier.fillMaxWidth()
