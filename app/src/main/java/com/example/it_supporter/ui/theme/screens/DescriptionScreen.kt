@@ -64,6 +64,7 @@ fun DescriptionScreen(
             showDismissButton = false,
             onConfirm = { email ->
                 everythingViewModel.email = email
+                everythingViewModel.description = true
             }
         )
     }

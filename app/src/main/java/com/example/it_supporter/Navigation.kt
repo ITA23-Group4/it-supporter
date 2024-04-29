@@ -20,7 +20,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "solution"){
+    NavHost(navController = navController, startDestination = "device"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -56,7 +56,8 @@ fun Navigation() {
         }
         composable("cookie"){
             CookieScreen(
-                navController = navController
+                navController = navController,
+                everythingViewModel = everythingViewModel
             )
         }
         // TODO composable("silent"){}
