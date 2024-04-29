@@ -2,9 +2,11 @@ package com.example.it_supporter
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.it_supporter.ui.theme.screens.TimeScreen
 import com.example.it_supporter.ui.theme.screens.DescriptionScreen
 import com.example.it_supporter.ui.theme.screens.Device
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
@@ -25,7 +27,9 @@ fun Navigation() {
             )
         }
         composable("time"){
-
+            TimeScreen(
+                navController = navController
+            )
         }
         composable("description"){
             DescriptionScreen(
