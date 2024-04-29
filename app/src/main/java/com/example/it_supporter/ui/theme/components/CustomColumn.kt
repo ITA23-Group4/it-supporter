@@ -13,6 +13,5 @@ fun CustomColumn(
     Column (
         modifier.padding(30.dp, 0.dp)
     ){
-
     }
 }
