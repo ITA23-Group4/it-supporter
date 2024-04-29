@@ -58,7 +58,7 @@ fun CookieScreen(
 
         Button(
             onClick = {
-                navController.navigate("solution")
+                navController.navigate("loading")
                 everythingViewModel.allowCookies = true
             }) {
             Text(text = "Apply")

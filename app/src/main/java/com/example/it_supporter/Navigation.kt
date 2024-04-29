@@ -11,6 +11,7 @@ import com.example.it_supporter.ui.theme.screens.CookieScreen
 import com.example.it_supporter.ui.theme.screens.TimeScreen
 import com.example.it_supporter.ui.theme.screens.DescriptionScreen
 import com.example.it_supporter.ui.theme.screens.Device
+import com.example.it_supporter.ui.theme.screens.LoadingScreen
 import com.example.it_supporter.ui.theme.screens.SolutionScreen
 import com.example.it_supporter.ui.theme.screens.SpecificScreen
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
@@ -20,7 +21,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "welcome"){
+    NavHost(navController = navController, startDestination = "cookie"){
         composable("welcome"){
             WelcomeScreen(
                 navController = navController
@@ -65,6 +66,9 @@ fun Navigation() {
                 customProgressBarProgress = 1.0f,
                 everythingViewModel = everythingViewModel
             )
+        }
+        composable("loading"){
+            LoadingScreen(navController = navController)
         }
         // TODO composable("silent"){}
         composable("solution"){
