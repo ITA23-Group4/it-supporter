@@ -43,6 +43,7 @@ fun WelcomeScreen(
         Text(
             text = "This app is here to give you the best possible support for your IT problems.",
             textAlign = TextAlign.Center,
+            fontSize = 20.sp
         )
         Spacer(modifier = Modifier
             .size(60.dp)
