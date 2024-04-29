@@ -20,7 +20,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "device"){
+    NavHost(navController = navController, startDestination = "solution"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -64,7 +64,7 @@ fun Navigation() {
             SolutionScreen(
                 navController = navController,
                 everythingViewModel = everythingViewModel,
-                CustomProgressBar(0.5f)
+                customProgressBarProgress = 0.7f
             )
         }
     }
