@@ -17,12 +17,6 @@ fun SolutionScreen(
         backgroundColor = CustomColorScheme.butterflyBushColor
     ){
         Text(text = "Congratulations! 🎉")
-        Text(text = "Based on the information you've provided:")
-        Text(text = "Device: ${everythingViewModel.device}")
-        Text(text = "Duration: ${everythingViewModel.time}")
-        Text(text = "Email: ${everythingViewModel.email}")
-        Text(text = "Cookies: ${if (everythingViewModel.allowCookies) "Enabled" else "Disabled"}")
-        Text(text = "Our custom solution:")
         Text(text = "Try restarting your device! 🔄")
     }
 }

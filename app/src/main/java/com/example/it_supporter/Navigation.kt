@@ -14,6 +14,7 @@ import com.example.it_supporter.ui.theme.screens.Device
 import com.example.it_supporter.ui.theme.screens.LoadingScreen
 import com.example.it_supporter.ui.theme.screens.SolutionScreen
 import com.example.it_supporter.ui.theme.screens.SpecificScreen
+import com.example.it_supporter.ui.theme.screens.SummaryScreen
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
 
 @Composable
@@ -64,6 +65,12 @@ fun Navigation() {
             CookieScreen(
                 navController = navController,
                 customProgressBarProgress = 1.0f,
+                everythingViewModel = everythingViewModel
+            )
+        }
+        composable("summary"){
+            SummaryScreen(
+                navController = navController,
                 everythingViewModel = everythingViewModel
             )
         }

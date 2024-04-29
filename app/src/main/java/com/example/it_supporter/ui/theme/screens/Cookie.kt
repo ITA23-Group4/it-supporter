@@ -71,7 +71,7 @@ fun CookieScreen(
 
         FilledTonalButton(
             onClick = {
-                navController.navigate("loading")
+                navController.navigate("summary")
                 everythingViewModel.allowCookies = true
             },
             modifier = Modifier
