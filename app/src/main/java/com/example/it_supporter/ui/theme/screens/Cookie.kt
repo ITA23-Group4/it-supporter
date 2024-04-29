@@ -48,7 +48,7 @@ fun CookieScreen(
         }
 
         Button(
-            onClick = { navController.navigate("silent") }) {
+            onClick = { navController.navigate("solution") }) {
             Text(text = "Apply")
         }
     }

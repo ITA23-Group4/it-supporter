@@ -11,6 +11,7 @@ import com.example.it_supporter.ui.theme.screens.CookieScreen
 import com.example.it_supporter.ui.theme.screens.TimeScreen
 import com.example.it_supporter.ui.theme.screens.DescriptionScreen
 import com.example.it_supporter.ui.theme.screens.Device
+import com.example.it_supporter.ui.theme.screens.SolutionScreen
 import com.example.it_supporter.ui.theme.screens.SpecificScreen
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
 
@@ -58,11 +59,13 @@ fun Navigation() {
                 navController = navController
             )
         }
-        composable("silent"){
-
-        }
+        // TODO composable("silent"){}
         composable("solution"){
-
+            SolutionScreen(
+                navController = navController,
+                everythingViewModel = everythingViewModel,
+                CustomProgressBar(0.5f)
+            )
         }
     }
 
