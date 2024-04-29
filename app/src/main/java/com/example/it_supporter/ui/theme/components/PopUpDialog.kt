@@ -12,7 +12,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.navigation.NavController
 
 @Composable
-fun PopUpDialog(
+fun PopUpDialogButton(
     navController: NavController,
     promptText: String,
     buttonText: String,

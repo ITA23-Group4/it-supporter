@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.EverythingViewModel
-import com.example.it_supporter.ui.theme.components.PopUpDialog
+import com.example.it_supporter.ui.theme.components.PopUpDialogButton
 
 @Composable
 fun DescriptionScreen(
@@ -54,7 +54,7 @@ fun DescriptionScreen(
             Text(text = "YES")
         }
 
-        PopUpDialog(
+        PopUpDialogButton(
             navController = navController,
             promptText = "Please enter your email",
             buttonText = "Continue",
