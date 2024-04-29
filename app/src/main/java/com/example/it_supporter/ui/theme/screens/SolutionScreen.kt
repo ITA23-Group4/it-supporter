@@ -17,7 +17,6 @@ fun SolutionScreen(
         Text(text = "Based on the information you've provided:")
         Text(text = "Device: ${everythingViewModel.device}")
         Text(text = "Duration: ${everythingViewModel.time}")
-        Text(text = "Issue: ${everythingViewModel.description}")
         Text(text = "Email: ${everythingViewModel.email}")
         Text(text = "Cookies: ${if (everythingViewModel.allowCookies) "Enabled" else "Disabled"}")
         Text(text = "Our custom solution:")
