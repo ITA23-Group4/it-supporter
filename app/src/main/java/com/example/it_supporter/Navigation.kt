@@ -19,7 +19,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "baby"){
+    NavHost(navController = navController, startDestination = "device"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -39,9 +39,6 @@ fun Navigation() {
                 navController = navController,
                 everythingViewModel = everythingViewModel
             )
-        }
-        composable("pop-up"){
-
         }
         composable("baby"){
             BabyScreen(

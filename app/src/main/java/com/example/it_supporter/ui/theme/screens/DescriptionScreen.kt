@@ -43,7 +43,7 @@ fun DescriptionScreen(
             navController = navController,
             promptText = "Please enter your email",
             buttonText = "Continue",
-            destination = "pop-up",
+            destination = "baby",
             inputFieldLabel = "Email"
         ) { email ->
             everythingViewModel.email = email
