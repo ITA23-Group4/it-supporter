@@ -20,7 +20,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "solution"){
+    NavHost(navController = navController, startDestination = "device"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -28,35 +28,39 @@ fun Navigation() {
             Device(
                 navController = navController,
                 everythingViewModel = everythingViewModel,
-                CustomProgressBar(0.1f)
+                customProgressBarProgress = 0.1f
             )
         }
         composable("time"){
             TimeScreen(
                 navController = navController,
                 everythingViewModel = everythingViewModel,
-                CustomProgressBar(0.5f)
+                customProgressBarProgress = 0.8f
             )
         }
         composable("description"){
             DescriptionScreen(
                 navController = navController,
-                everythingViewModel = everythingViewModel
+                everythingViewModel = everythingViewModel,
+                customProgressBarProgress = 0.3f
             )
         }
         composable("baby"){
             BabyScreen(
-                navController = navController
+                navController = navController,
+                customProgressBarProgress = 0.2f
             )
         }
         composable("specific"){
             SpecificScreen(
-                navController = navController
+                navController = navController,
+                customProgressBarProgress = 0.6f
             )
         }
         composable("cookie"){
             CookieScreen(
-                navController = navController
+                navController = navController,
+                customProgressBarProgress = 1.0f
             )
         }
         // TODO composable("silent"){}

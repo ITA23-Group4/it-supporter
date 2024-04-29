@@ -18,16 +18,20 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.EverythingViewModel
+import com.example.it_supporter.ui.theme.components.CustomProgressBar
 import com.example.it_supporter.ui.theme.components.PopUpDialogButton
 
 @Composable
 fun DescriptionScreen(
     navController: NavController,
     everythingViewModel: EverythingViewModel,
+    customProgressBarProgress: Float
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
     CustomColumn {
+        CustomProgressBar(progress = customProgressBarProgress)
+
         Text(
             text = "Can you describe the problem you're experiencing in detail",
             textAlign = TextAlign.Center

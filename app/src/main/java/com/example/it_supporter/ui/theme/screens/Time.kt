@@ -23,9 +23,9 @@ import androidx.compose.ui.unit.dp
 fun TimeScreen(
     navController: NavController,
     everythingViewModel: EverythingViewModel,
-    customProgressBar: Unit
+    customProgressBarProgress: Float
 ) {
-    customProgressBar
+
 
     val timeScale = remember {
         listOf(
@@ -46,6 +46,7 @@ fun TimeScreen(
 
 
     CustomColumn {
+        CustomProgressBar(progress = customProgressBarProgress)
         Text(text = "For how long have you had issues with your ${everythingViewModel.device}?")
 
         Spacer(modifier = androidx.compose.ui.Modifier.height(30.dp))

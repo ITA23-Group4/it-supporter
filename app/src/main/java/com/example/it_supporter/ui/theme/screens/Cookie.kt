@@ -17,14 +17,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
+import com.example.it_supporter.ui.theme.components.CustomProgressBar
 
 @Composable
 fun CookieScreen(
-    navController: NavController
+    navController: NavController,
+    customProgressBarProgress: Float
+
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
     CustomColumn {
+        CustomProgressBar(progress = customProgressBarProgress)
+
         Text(text = "Have you tried giving your device a cookie")
 
 
