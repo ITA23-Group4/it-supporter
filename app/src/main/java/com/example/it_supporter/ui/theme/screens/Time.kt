@@ -17,6 +17,7 @@ import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.ui.theme.components.CustomProgressBar
 import java.lang.reflect.Modifier
 import androidx.compose.foundation.layout.height
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun TimeScreen(
