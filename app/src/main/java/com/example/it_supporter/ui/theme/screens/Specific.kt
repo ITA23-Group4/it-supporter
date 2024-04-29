@@ -51,7 +51,7 @@ fun SpecificScreen(
 
 
         Row (modifier = Modifier.fillMaxWidth()){
-            Spacer(modifier = Modifier.size(270.dp))
+            Spacer(modifier = Modifier.size(240.dp))
             FilledTonalButton(
                 onClick = { navController.navigate("cookie") },
                 modifier = Modifier
