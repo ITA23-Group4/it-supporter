@@ -9,12 +9,14 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun CustomColumn(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit // Lambda parameter for children composables
 ) {
-    Column (
+    Column(
         modifier
             .padding(30.dp, 0.dp)
             .fillMaxSize()
-    ){
+    ) {
+        content() // Call the lambda to include children composables
     }
 }
