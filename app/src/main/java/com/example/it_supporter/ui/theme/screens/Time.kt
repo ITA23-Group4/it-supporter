@@ -1,27 +1,24 @@
 package com.example.it_supporter.ui.theme.screens
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
-import java.lang.reflect.Modifier
+import com.example.it_supporter.ui.theme.components.CustomProgressBar
 
 @Composable
 fun TimeScreen(
     //TODO Add everything viewmodel
-    navController: NavController
+    navController: NavController,
+    customProgressBar: Unit
 ) {
+    customProgressBar
 
     val timeScale = remember {
         listOf(

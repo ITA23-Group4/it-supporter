@@ -23,7 +23,7 @@ import com.example.it_supporter.ui.theme.components.PopUpDialogButton
 @Composable
 fun DescriptionScreen(
     navController: NavController,
-    everythingViewModel: EverythingViewModel
+    everythingViewModel: EverythingViewModel,
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
