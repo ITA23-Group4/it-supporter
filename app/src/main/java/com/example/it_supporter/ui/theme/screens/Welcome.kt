@@ -1,6 +1,7 @@
 package com.example.it_supporter.ui.theme.screens
 
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +24,7 @@ fun WelcomeScreen(
 
     ) {
         Text(
+            modifier = Modifier.fillMaxWidth(),
             text = "Welcome",
             textAlign = TextAlign.Center,
             fontSize = 40.sp
