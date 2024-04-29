@@ -12,10 +12,10 @@ val Pink40 = Color(0xFF7D5260)
 
 object CustomColorScheme {
     // Light Color Scheme
-    val Orange = Color(0xFFEA620E)
-    val Mocha = Color(0xFFFFEECE)
-    val Beige = Color(0xFFD5C6AC)
     val OffWhite = Color(0xFFF4F3F1)
-    val LightGray = Color(0xFFFAF9F6)
-    val OffBlack = Color(0xFF212427)
+    val duneColor = Color(0xFF221F1D)
+    val butterflyBushColor = Color(0xFF6A4B9E)
+    val mantisColor = Color(0xFF71C671)
+    val goldColor = Color(0xFFFFD700)
+    val mexicanRedColor = Color(0xFFB22222)
 }

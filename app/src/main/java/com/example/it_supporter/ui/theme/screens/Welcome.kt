@@ -23,6 +23,7 @@ fun WelcomeScreen(
     CustomColumn(
 
     ) {
+        Spacer(modifier = Modifier.size(30.dp))
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = "Welcome",
