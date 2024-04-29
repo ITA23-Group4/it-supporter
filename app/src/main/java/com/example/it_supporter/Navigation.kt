@@ -5,6 +5,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.it_supporter.ui.theme.screens.DescriptionScreen
 import com.example.it_supporter.ui.theme.screens.WelcomeScreen
 
 @Composable
@@ -12,7 +13,7 @@ fun Navigation() {
     val navController = rememberNavController()
     val everythingViewModel: EverythingViewModel = remember { EverythingViewModel() }
 
-    NavHost(navController = navController, startDestination = "welcome"){
+    NavHost(navController = navController, startDestination = "description"){
         composable("welcome"){
             WelcomeScreen()
         }
@@ -23,7 +24,7 @@ fun Navigation() {
 
         }
         composable("description"){
-
+            DescriptionScreen()
         }
         composable("pop-up"){
 
