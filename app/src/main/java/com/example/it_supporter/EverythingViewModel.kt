@@ -6,5 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
 class EverythingViewModel : ViewModel() {
+    var email: String = ""
     var device: String by mutableStateOf("")
 }
