@@ -2,8 +2,14 @@ package com.example.it_supporter.ui.theme.screens
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,7 +28,7 @@ fun WelcomeScreen(
     navController: NavController,
     ) {
     CustomColumn(
-        backgroundColor = CustomColorScheme.butterflyBushColor
+        backgroundColor = CustomColorScheme.goldColor
     ) {
         Spacer(modifier = Modifier.size(30.dp))
         Text(
@@ -41,7 +47,14 @@ fun WelcomeScreen(
         Spacer(modifier = Modifier
             .size(60.dp)
         )
-        Button(onClick = { navController.navigate("device") }) {
+
+        FilledTonalButton(
+            onClick = { navController.navigate("device") },
+            modifier = Modifier
+                .padding(8.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = CustomColorScheme.mexicanRedColor),
+            shape = RoundedCornerShape(0.dp)
+        ){
             Text(text = "Get Help")
         }
     }
