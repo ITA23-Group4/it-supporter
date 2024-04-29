@@ -18,12 +18,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.EverythingViewModel
-import com.example.it_supporter.ui.theme.components.PopUpDialog
+import com.example.it_supporter.ui.theme.components.PopUpDialogButton
 
 @Composable
 fun DescriptionScreen(
     navController: NavController,
-    everythingViewModel: EverythingViewModel
+    everythingViewModel: EverythingViewModel,
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
@@ -54,14 +54,17 @@ fun DescriptionScreen(
             Text(text = "YES")
         }
 
-        PopUpDialog(
+        PopUpDialogButton(
             navController = navController,
             promptText = "Please enter your email",
             buttonText = "Continue",
             destination = "baby",
-            inputFieldLabel = "Email"
-        ) { email ->
-            everythingViewModel.email = email
-        }
+            inputFieldLabel = "Email",
+            showTextField = true,
+            showDismissButton = false,
+            onConfirm = { email ->
+                everythingViewModel.email = email
+            }
+        )
     }
 }
