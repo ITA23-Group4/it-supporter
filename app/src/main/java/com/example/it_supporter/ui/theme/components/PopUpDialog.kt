@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -18,7 +19,9 @@ fun PopUpDialogButton(
     buttonText: String,
     destination: String,
     inputFieldLabel: String,
-    onConfirm: (String) -> Unit
+    onConfirm: (String) -> Unit,
+    showTextField: Boolean,
+    showDismissButton: Boolean
 ) {
     var isDialogOpen by remember { mutableStateOf(false) }
     var inputText by remember { mutableStateOf(TextFieldValue()) }
@@ -33,14 +36,16 @@ fun PopUpDialogButton(
                 onDismissRequest = { isDialogOpen = false },
                 title = { Text(text = promptText) },
                 text = {
-                    TextField(
-                        value = inputText,
-                        onValueChange = { inputText = it },
-                        label = { Text(text = inputFieldLabel) }
-                    )
+                    if (showTextField) {
+                        TextField(
+                            value = inputText,
+                            onValueChange = { inputText = it },
+                            label = { Text(text = inputFieldLabel) }
+                        )
+                    }
                 },
                 confirmButton = {
-                    Button(
+                    TextButton(
                         onClick = {
                             isDialogOpen = false
                             onConfirm(inputText.text)
@@ -48,6 +53,18 @@ fun PopUpDialogButton(
                         }
                     ) {
                         Text(text = "OK")
+                    }
+                },
+                dismissButton = {
+                    if (showDismissButton) {
+                        TextButton(
+                            onClick = {
+                                isDialogOpen = false
+                                navController.navigate(destination)
+                            }
+                        ) {
+                            Text(text = "NO")
+                        }
                     }
                 }
             )

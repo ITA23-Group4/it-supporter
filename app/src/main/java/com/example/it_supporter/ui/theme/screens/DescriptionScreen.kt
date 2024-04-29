@@ -59,9 +59,12 @@ fun DescriptionScreen(
             promptText = "Please enter your email",
             buttonText = "Continue",
             destination = "baby",
-            inputFieldLabel = "Email"
-        ) { email ->
-            everythingViewModel.email = email
-        }
+            inputFieldLabel = "Email",
+            showTextField = true,
+            showDismissButton = false,
+            onConfirm = { email ->
+                everythingViewModel.email = email
+            }
+        )
     }
 }
