@@ -31,7 +31,8 @@ fun Navigation() {
         }
         composable("time"){
             TimeScreen(
-                navController = navController
+                navController = navController,
+                everythingViewModel = everythingViewModel
             )
         }
         composable("description"){

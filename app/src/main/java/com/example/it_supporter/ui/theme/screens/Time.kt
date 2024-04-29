@@ -1,6 +1,7 @@
 package com.example.it_supporter.ui.theme.screens
 
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -14,13 +15,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import java.lang.reflect.Modifier
+import androidx.compose.foundation.layout.height
 
 @Composable
 fun TimeScreen(
-    //TODO Add everything viewmodel
-    navController: NavController
+    navController: NavController,
+    everythingViewModel: EverythingViewModel
 ) {
 
     val timeScale = remember {
@@ -42,11 +45,12 @@ fun TimeScreen(
 
 
     CustomColumn {
-        Text(text = "How long have you had issues with your device?")
+        Text(text = "For how long have you had issues with your ${everythingViewModel.device}?")
+
+        Spacer(modifier = androidx.compose.ui.Modifier.height(30.dp))
         Text(
             text = timeScale[(sliderPosition * (timeScale.size - 1)).toInt()],
         )
-
 
 
         Slider(

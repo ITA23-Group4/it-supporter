@@ -1,8 +1,20 @@
 package com.example.it_supporter.ui.theme.screens
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
 
@@ -10,13 +22,34 @@ import com.example.it_supporter.ui.theme.components.CustomColumn
 fun CookieScreen(
     navController: NavController
 ) {
+    var isChecked by remember { mutableStateOf(false) }
+
     CustomColumn {
         Text(text = "Have you tried giving your device a cookie")
-        Text(text = "Turn on cookies to continue")
+
+
+        Row (modifier = Modifier
+            .fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ){
+            Text(text = "Turn on cookies to continue")
+
+            Switch(
+                checked = isChecked,
+                onCheckedChange = { isChecked = it },
+                colors = SwitchDefaults.colors(
+                    uncheckedBorderColor = Color.LightGray,
+                    checkedBorderColor = Color.LightGray,
+                    checkedTrackColor = Color.Green,
+                    checkedThumbColor = Color.LightGray
+                )
+            )
+        }
 
         Button(
             onClick = { navController.navigate("silent") }) {
-            Text(text = "Turn on Cookies")
+            Text(text = "Apply")
         }
     }
 
