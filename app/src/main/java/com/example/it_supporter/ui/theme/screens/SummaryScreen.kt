@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.CustomColorScheme
@@ -25,15 +26,14 @@ fun SummaryScreen(
     ){
 
         Spacer(modifier = Modifier.size(40.dp))
-        Text(text = "You have choosen the following options")
-        Text(text = "Based on the information you've provided:")
+        Text(text = "YOU have provided the following information")
         Spacer(modifier = Modifier.size(102.dp))
         Text(text = "Device: ${everythingViewModel.device}")
         Text(text = "Duration: ${everythingViewModel.time}")
         Text(text = "Email: ${everythingViewModel.email}")
         Text(text = "Cookies: ${if (everythingViewModel.allowCookies) "Enabled" else "Disabled"}")
         Spacer(modifier = Modifier.size(60.dp))
-        Text(text = "Our custom solution is now just one click away")
+        Text(text = "Here is a tailored solution just for you")
         Spacer(modifier = Modifier.size(20.dp))
         FilledTonalButton(
             onClick = { navController.navigate("loading") },
@@ -42,7 +42,7 @@ fun SummaryScreen(
             colors = ButtonDefaults.buttonColors(containerColor = CustomColorScheme.mexicanRedColor),
             shape = RoundedCornerShape(0.dp)
         ){
-            Text(text = "Get Solution")
+            Text(text = "Get Solution!!!", fontSize = 24.sp)
         }
     }
 }
