@@ -66,7 +66,7 @@ fun TimeScreen(
             onClick = {
                 navController.navigate("description")
             }) {
-            Text(text = "Continue to")
+            Text(text = "Continue")
         }
     }
 }
