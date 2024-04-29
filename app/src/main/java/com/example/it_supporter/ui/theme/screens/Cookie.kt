@@ -32,7 +32,7 @@ fun CookieScreen(
     CustomColumn (
         backgroundColor = CustomColorScheme.butterflyBushColor
     ){
-        CustomProgressBar(progress = customProgressBarProgress)
+        CustomProgressBar(progress = customProgressBarProgress, height = 40)
 
         Text(text = "Have you tried giving your device a cookie")
 

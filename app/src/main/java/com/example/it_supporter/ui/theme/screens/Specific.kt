@@ -18,7 +18,7 @@ fun SpecificScreen(
     CustomColumn (
         backgroundColor = CustomColorScheme.butterflyBushColor
     ){
-        CustomProgressBar(progress = customProgressBarProgress)
+        CustomProgressBar(progress = customProgressBarProgress, height = 60)
         Text(text = "Have you rememberd to clean out all the cat hair from the charing port")
         Button(
             onClick = { navController.navigate("cookie") }) {

@@ -1,6 +1,7 @@
 package com.example.it_supporter.ui.theme.components
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -12,17 +13,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CustomProgressBar(progress: Float) {
+fun CustomProgressBar(
+    height: Int,
+    progress: Float
+) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(8.dp)
+            .height(height.dp)
             .padding(horizontal = 16.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         LinearProgressIndicator(
             progress = progress.toFloat(),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(),
             color = Color.Blue,
             trackColor = Color.LightGray // Changed from backgroundColor to trackColor
         )

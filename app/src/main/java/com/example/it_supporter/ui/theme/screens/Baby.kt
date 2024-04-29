@@ -65,7 +65,7 @@ fun BabyScreen(
 
 
         Spacer(modifier = Modifier.size(140.dp))
-        CustomProgressBar(progress = customProgressBarProgress)
+        CustomProgressBar(progress = customProgressBarProgress, height = 20)
 
     }
 }
