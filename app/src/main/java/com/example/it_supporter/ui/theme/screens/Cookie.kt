@@ -16,14 +16,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
+import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.ui.theme.components.CustomProgressBar
 
 @Composable
 fun CookieScreen(
     navController: NavController,
-    customProgressBarProgress: Float
-
+    customProgressBarProgress: Float,
+    everythingViewModel: EverythingViewModel
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
@@ -53,7 +54,10 @@ fun CookieScreen(
         }
 
         Button(
-            onClick = { navController.navigate("solution") }) {
+            onClick = {
+                navController.navigate("solution")
+                everythingViewModel.allowCookies = true
+            }) {
             Text(text = "Apply")
         }
     }
