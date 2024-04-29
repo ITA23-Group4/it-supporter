@@ -19,6 +19,7 @@ fun Navigation() {
         }
         composable("device"){
             Device(
+                navController = navController,
                 everythingViewModel = everythingViewModel
             )
         }

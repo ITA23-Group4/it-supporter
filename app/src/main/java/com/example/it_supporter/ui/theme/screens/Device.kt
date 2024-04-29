@@ -1,14 +1,18 @@
 package com.example.it_supporter.ui.theme.screens
 
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.navigation.NavController
 import com.example.it_supporter.EverythingViewModel
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.ui.theme.components.CustomDropDownMenu
 
 @Composable
 fun Device(
+    navController: NavController,
     everythingViewModel: EverythingViewModel
 ) {
 
@@ -29,6 +33,15 @@ fun Device(
             onValueChangedEvent = { newValue -> everythingViewModel.device = newValue }
         )
 
+        Row {
+            Button(onClick = { navController.popBackStack() }) {
+                Text(text = "Back")
+            }
+
+            Button(onClick = { navController.navigate("time") }) {
+                Text(text = "Continue")
+            }
+        }
 
     }
 }
