@@ -46,7 +46,6 @@ fun TimeScreen(
 
 
     CustomColumn {
-        CustomProgressBar(progress = customProgressBarProgress)
         Text(text = "For how long have you had issues with your ${everythingViewModel.device}?")
 
         Spacer(modifier = androidx.compose.ui.Modifier.height(30.dp))
@@ -57,14 +56,18 @@ fun TimeScreen(
 
         Slider(
             value = sliderPosition,
-            onValueChange = { sliderPosition = it },
+            onValueChange = {
+                sliderPosition = it
+            },
             valueRange = 0f..1f,
             steps = 100,
-        )
+
+            )
 
         Button(
             onClick = {
                 navController.navigate("description")
+                everythingViewModel.time = timeScale[(sliderPosition * (timeScale.size - 1)).toInt()]
             }) {
             Text(text = "Continue")
         }
