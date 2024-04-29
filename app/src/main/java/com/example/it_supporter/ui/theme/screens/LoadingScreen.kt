@@ -1,5 +1,6 @@
 package com.example.it_supporter.ui.theme.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -9,6 +10,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import kotlinx.coroutines.delay
 
 
@@ -16,7 +18,8 @@ import kotlinx.coroutines.delay
 fun LoadingScreen(navController: NavController) {
     Box(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .background(CustomColorScheme.goldColor),
         contentAlignment = Alignment.Center
     ) {
         Text(text = "Loading...")
