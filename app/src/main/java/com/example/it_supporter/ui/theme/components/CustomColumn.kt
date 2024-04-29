@@ -10,13 +10,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun CustomColumn(
     modifier: Modifier = Modifier,
-    content: @Composable () -> Unit // Lambda parameter for children composables
+    content: @Composable () -> Unit
 ) {
     Column(
         modifier
             .padding(30.dp, 0.dp)
             .fillMaxSize()
     ) {
-        content() // Call the lambda to include children composables
+        content()
     }
 }
