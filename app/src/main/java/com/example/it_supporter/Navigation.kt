@@ -18,7 +18,9 @@ fun Navigation() {
             WelcomeScreen()
         }
         composable("device"){
-            Device()
+            Device(
+                everythingViewModel = everythingViewModel
+            )
         }
         composable("time"){
 
