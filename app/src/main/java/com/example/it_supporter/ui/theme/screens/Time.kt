@@ -69,7 +69,7 @@ fun TimeScreen(
                 navController.navigate("description")
                 everythingViewModel.time = timeScale[(sliderPosition * (timeScale.size - 1)).toInt()]
             }) {
-            Text(text = "Continue")
+            Text(text = "Continue forth")
         }
     }
 }
