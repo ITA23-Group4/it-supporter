@@ -4,6 +4,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.ui.theme.components.CustomProgressBar
 
@@ -13,7 +14,9 @@ fun BabyScreen(
     customProgressBarProgress: Float
 
 ) {
-    CustomColumn {
+    CustomColumn (
+        backgroundColor = CustomColorScheme.butterflyBushColor
+    ){
         CustomProgressBar(progress = customProgressBarProgress)
 
         Text(text = "Can you not just stop being a baby about it?")

@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import com.example.it_supporter.ui.theme.components.CustomColumn
 
 @Composable
@@ -21,7 +22,7 @@ fun WelcomeScreen(
     navController: NavController,
     ) {
     CustomColumn(
-
+        backgroundColor = CustomColorScheme.butterflyBushColor
     ) {
         Spacer(modifier = Modifier.size(30.dp))
         Text(

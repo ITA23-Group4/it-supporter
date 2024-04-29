@@ -4,6 +4,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import com.example.it_supporter.EverythingViewModel
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import com.example.it_supporter.ui.theme.components.CustomColumn
 
 @Composable
@@ -12,7 +13,9 @@ fun SolutionScreen(
     everythingViewModel: EverythingViewModel,
     customProgressBarProgress: Float
 ) {
-    CustomColumn {
+    CustomColumn (
+        backgroundColor = CustomColorScheme.butterflyBushColor
+    ){
         Text(text = "Congratulations! 🎉")
         Text(text = "Based on the information you've provided:")
         Text(text = "Device: ${everythingViewModel.device}")

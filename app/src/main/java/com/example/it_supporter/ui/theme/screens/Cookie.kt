@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.example.it_supporter.EverythingViewModel
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.ui.theme.components.CustomProgressBar
 
@@ -28,7 +29,9 @@ fun CookieScreen(
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
-    CustomColumn {
+    CustomColumn (
+        backgroundColor = CustomColorScheme.butterflyBushColor
+    ){
         CustomProgressBar(progress = customProgressBarProgress)
 
         Text(text = "Have you tried giving your device a cookie")

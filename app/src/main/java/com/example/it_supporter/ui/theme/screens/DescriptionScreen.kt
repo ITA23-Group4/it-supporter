@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import com.example.it_supporter.ui.theme.components.CustomColumn
 import com.example.it_supporter.EverythingViewModel
+import com.example.it_supporter.ui.theme.CustomColorScheme
 import com.example.it_supporter.ui.theme.components.CustomProgressBar
 import com.example.it_supporter.ui.theme.components.PopUpDialogButton
 
@@ -29,7 +30,9 @@ fun DescriptionScreen(
 ) {
     var isChecked by remember { mutableStateOf(false) }
 
-    CustomColumn {
+    CustomColumn (
+        backgroundColor = CustomColorScheme.butterflyBushColor
+    ){
         CustomProgressBar(progress = customProgressBarProgress)
 
         Text(

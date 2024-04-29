@@ -18,6 +18,7 @@ import com.example.it_supporter.ui.theme.components.CustomProgressBar
 import java.lang.reflect.Modifier
 import androidx.compose.foundation.layout.height
 import androidx.compose.ui.unit.dp
+import com.example.it_supporter.ui.theme.CustomColorScheme
 
 @Composable
 fun TimeScreen(
@@ -45,7 +46,9 @@ fun TimeScreen(
     var sliderPosition by remember { mutableStateOf(0f) }
 
 
-    CustomColumn {
+    CustomColumn (
+        backgroundColor = CustomColorScheme.butterflyBushColor
+    ){
         Text(text = "For how long have you had issues with your ${everythingViewModel.device}?")
 
         Spacer(modifier = androidx.compose.ui.Modifier.height(30.dp))
